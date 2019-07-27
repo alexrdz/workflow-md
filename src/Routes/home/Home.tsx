@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Button } from "../../UI/button/Button";
 
-export const Home: React.FC = props => {
+export const Home: React.FC = () => {
   return (
     <React.Fragment>
       <div className="jumbotron">
@@ -36,7 +36,7 @@ export const Home: React.FC = props => {
                     Go somewhere
                   </a>
 
-									
+
                   <button type="button" className="btn btn-danger bmd-btn-fab">
                     <i className="material-icons">grade</i>
                   </button>
