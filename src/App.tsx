@@ -1,7 +1,8 @@
 import * as React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Nav} from './Nav';
+import 'bootstrap-material-design/dist/css/bootstrap-material-design.min';
+import {Nav} from './UI/nav/Nav';
 
 class App extends React.Component<{}, { toggle: boolean }> {
   state = { toggle: true };
