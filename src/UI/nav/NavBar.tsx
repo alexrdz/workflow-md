@@ -1,12 +1,12 @@
 import * as React from "react";
-import {Router, Link} from '@reach/router';
-import './nav.css';
+import {Link} from '@reach/router';
+import './navbar.css';
 import {Drawer} from '../drawer/Drawer';
 
-export const Nav: React.FunctionComponent = () => {
+export const NavBar: React.FunctionComponent = () => {
   return (
-		<React.Fragment>
-    <nav className="navbar navbar-light bg-light navbar-expand-lg shadow-none border-bottom">
+		<header className="nav-header">
+    <nav className="main-nav navbar navbar-light bg-light navbar-expand-lg shadow-none border-bottom">
       <a className="navbar-brand" href="#">
         MSI React Seed
       </a>
@@ -73,6 +73,6 @@ export const Nav: React.FunctionComponent = () => {
         </form>
       </div>
     </nav>
-		</React.Fragment>
+		</header>
   );
 };

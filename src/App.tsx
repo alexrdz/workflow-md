@@ -1,9 +1,10 @@
-import * as React from 'react';
-import 'bootstrap-material-design/dist/css/bootstrap-material-design.min';
+import * as React from "react";
+import "bootstrap-material-design/dist/css/bootstrap-material-design.min";
 import { Router, RouteComponentProps } from "@reach/router";
-import {Nav} from './UI/nav/Nav';
-import {Home} from './Routes/home/Home';
-import {Contact} from './Routes/contact/Contact';
+import { NavBar } from "./UI/nav/NavBar";
+import { SideNav } from "./UI/nav/SideNav";
+import { Home } from "./Routes/home/Home";
+import { Contact } from "./Routes/contact/Contact";
 
 type Props = { component: React.ComponentType } & RouteComponentProps;
 const Route: React.FunctionComponent<Props> = ({
@@ -17,14 +18,20 @@ class App extends React.Component<{}, { toggle: boolean }> {
   render() {
     const { toggle } = this.state;
     return (
-      <div className="App">
-				<Nav />
-
-				<Router>
-					<Route path="/" component={Home}/>
-					<Route path="/contact" component={Contact}/>
-    		</Router>
-			</div>
+      <React.Fragment>
+        <NavBar />
+        <div className="container-fluid">
+          <div className="row">
+            <SideNav />
+						<div className="col-12 col-md-9">
+							<Router>
+								<Route path="/" component={Home} />
+								<Route path="/contact" component={Contact} />
+							</Router>
+						</div>
+          </div>
+        </div>
+      </React.Fragment>
     );
   }
 }

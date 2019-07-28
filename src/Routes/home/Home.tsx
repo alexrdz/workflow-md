@@ -1,31 +1,14 @@
 import * as React from "react";
-// import { Button } from "../../UI/button/Button";
-// import { Button } from 'reactstrap';
 import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
 	CardSubtitle, CardBody } from 'reactstrap';
+import {Hero} from '../../Components/hero/Hero';
 
 
 export const Home: React.FC = () => {
   return (
     <React.Fragment>
-      <div className="jumbotron">
-        <h1 className="display-4">Hello, world!</h1>
-        <p className="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
-        </p>
-        <hr className="my-4" />
-        <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
-        <p className="lead">
-          <Button color="danger" className="btn-raised">Learn More</Button>
-        </p>
-      </div>
-
-			<div className="container">
-			<CardColumns>
+			<Hero />
+			<CardColumns className="pt-4">
       <Card>
         <CardImg top width="100%" src="https://via.placeholder.com/256x180.png?text=Visit+WhoIsHostingThis" alt="Card image cap" />
         <CardBody>
@@ -66,7 +49,7 @@ export const Home: React.FC = () => {
         <Button color="secondary">Button</Button>
       </Card>
     </CardColumns>
-			</div>
+
 
       {/* <div className="container">
         <div className="row">
