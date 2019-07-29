@@ -45,7 +45,7 @@ class App extends React.Component<{}, { toggle: boolean }> {
                 </Link>
               </NavItem>
             </SideNav>
-            <div className="col-12 col-md-9">
+            <div className="col-12 col-md-9 p-0">
               <Router>
                 <Route path="/" component={Home} />
                 <Route path="/contact" component={Contact} />
