@@ -1,5 +1,5 @@
 import * as React from "react";
-import "bootstrap-material-design/dist/css/bootstrap-material-design.min";
+import './App.css';
 import { Router, RouteComponentProps, Link } from "@reach/router";
 import { NavBar } from "./UI/nav/NavBar";
 import { SideNav } from "./UI/nav/SideNav";

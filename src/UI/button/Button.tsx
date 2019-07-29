@@ -1,25 +1,17 @@
 import * as React from 'react';
-import './button.css';
+import {Button} from 'reactstrap';
 
-interface IProps {
-	buttonType: string;
-	label: string;
-	href?: string;
-	size?: 'lg | sm';
-}
-
-export const Button = (props: IProps) => {
-	const {label} = props;
-
-	if (props.buttonType === 'link') {
-		return (
-			<a className="btn btn-primary btn-lg" href={props.href} role="button">
-				{label}
-			</a>
-		);
-	} else {
-		return (
-			<button className="btn btn-primary btn-lg" type="button">{label}</button>
-		)
-	}
+export const RippleButton = (props) => {
+	const [rippleOn, setRippleOn] = React.useState(false);
+	const toggleRipple = () => {
+		setRippleOn(!rippleOn);
+	};
+	return (
+		<Button onMouseOver={toggleRipple} onMouseOut={toggleRipple}>
+			{props.children}
+			<div className="ripple-container">
+			<div className={`ripple-decorator ese ${rippleOn ? 'ripple-on' : 'ripple-out'}`}></div>
+			</div>
+		</Button>
+	)
 };

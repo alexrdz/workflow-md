@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./drawer.css";
+import {StyledLayoutDrawer} from './StyledLayoutDrawer';
 
 export const Drawer: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = React.useState(false);
@@ -24,7 +25,7 @@ export const Drawer: React.FC = () => {
           <span className="sr-only">Toggle drawer</span>
           <span className="navbar-toggler-icon" />
         </button>
-      <div id="dw-s2" className="bmd-layout-drawer bg-faded">
+      <StyledLayoutDrawer id="dw-s2" className="bmd-layout-drawer bg-faded">
         <header>
           <a className="navbar-brand">Title</a>
         </header>
@@ -33,7 +34,7 @@ export const Drawer: React.FC = () => {
           <a className="list-group-item">Link 2</a>
           <a className="list-group-item">Link 3</a>
         </ul>
-      </div>
+      </StyledLayoutDrawer>
       <div className={`bmd-layout-backdrop ${inClass}`} onClick={toggleMenu} />
       </div>
     </React.Fragment>
