@@ -8,6 +8,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import {PrimaryButton, SuccessButton, DangerButton} from '../../UI/buttons'
 
 export const UserProfile: React.FunctionComponent = () => {
 	const [isOpen, setIsOpen] = React.useState(false);
@@ -26,7 +27,7 @@ export const UserProfile: React.FunctionComponent = () => {
 					className="mb-4"
         />
 				<br/>
-			<Button color="primary" className="active mr-2">View Full Profile</Button>
+			<PrimaryButton>View Full Profile</PrimaryButton>
       </Media>
       <Media body>
         <Media heading>User Profile</Media>
@@ -36,16 +37,15 @@ export const UserProfile: React.FunctionComponent = () => {
         fringilla. Donec lacinia congue felis in faucibus.
 
         <div className="my-4">
-          <Button color="success" className="active mr-2">Edit Profile</Button>
+          <SuccessButton className="mr-2">Edit Profile</SuccessButton>
+          <DangerButton className="mr-2">Edit Profile</DangerButton>
           <ButtonDropdown isOpen={isOpen} toggle={toggle}>
-            <DropdownToggle color="danger" className="active" caret>Actions</DropdownToggle>
+            <DropdownToggle color="danger" caret>Actions</DropdownToggle>
             <DropdownMenu>
               <DropdownItem>Dropdown Link</DropdownItem>
               <DropdownItem>Dropdown Link</DropdownItem>
             </DropdownMenu>
           </ButtonDropdown>
-				{/* <ButtonGroup>
-        </ButtonGroup> */}
 				</div>
       </Media>
     </Media>

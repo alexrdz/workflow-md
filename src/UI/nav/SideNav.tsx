@@ -4,7 +4,7 @@ import {SideNavContainer} from './SideNavContainer';
 
 export const SideNav: React.FunctionComponent = props => {
   return (
-		<SideNavContainer theme="default" className="position-sticky col-12 col-md-3 border-right">
+		<SideNavContainer theme="default" className="position-sticky">
 			<Nav vertical>
 			{props.children}
 			</Nav>

@@ -1,52 +1,22 @@
-// @import './scss/bootstrap-material-design.scss';
+$primary: (
+  color: #7b1fa2,
+  dark:  darken(#7b1fa2, 10%),
+  light: lighten(#7b1fa2, 10%)
+);
+$secondary: (
+  color: #00BCD4,
+  dark:  darken(#00BCD4, 10%),
+  light: lighten(#00BCD4, 10%)
+);
 
+@import './scss/material.scss';
 
-// This is the main scss file, provided as an underscored file so that variable contexts remain in-tact when importing from the source.
-@import "./scss/variables/colors";
+@media(max-width: 768px) {
+	.navbar-expand-md .navbar-nav {
+		flex-direction: column;
+	}
+}
 
-$primary: rgb(26,168,221);
-$success: rgb(26, 221, 159);
-$info: rgb(26, 163, 221);
-$warning: rgb(221, 133, 26);
-$danger: rgb(221, 26, 62);
-$light: rgb(240, 240, 240);
-$dark: rgb(20, 79, 101);
-@import "./scss/variables";
-@import "./scss/mixins";
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/mixins";
-
-
-
-@import "node_modules/bootstrap/scss/bootstrap";
-
-
-@import "./scss/reboot";
-
-@import "./scss/layout";
-@import "./scss/buttons";
-@import "./scss/checkboxes";
-@import "./scss/custom-forms";
-@import "./scss/switches";
-@import "./scss/radios";
-@import "./scss/forms";
-@import "./scss/input-group";
-@import "./scss/list-group";
-@import "./scss/tables";
-@import "./scss/nav";
-@import "./scss/navbar";
-@import "./scss/alerts";
-@import "./scss/progress";
-@import "./scss/pagination";
-@import "./scss/type";
-@import "./scss/tooltip";
-@import "./scss/popover";
-@import "./scss/cards";
-@import "./scss/modal";
-@import "./scss/dropdown";
-@import "./scss/drawer";
-@import "./scss/themes";
-
-@import "./scss/ripples";
-
-@import "./scss/extensions";
+body {
+	background: #f3f3f3;
+}

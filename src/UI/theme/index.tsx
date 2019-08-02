@@ -15,4 +15,5 @@ export default {
 			color: '#ededed'
 		}
 	},
+	custom: {}
 };
