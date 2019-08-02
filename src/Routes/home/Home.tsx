@@ -1,104 +1,183 @@
 import * as React from "react";
-import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
-	CardSubtitle, CardBody } from 'reactstrap';
-import {Hero} from '../../Components/hero/Hero';
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  CardLink,
+  ListGroup,
+	ListGroupItem,
+	ListGroupItemHeading,
+	ListGroupItemText
+} from "reactstrap";
 
+import { UserProfile } from "../../Components/userprofile/UserProfile";
 
 export const Home: React.FC = () => {
   return (
     <React.Fragment>
-			<Hero />
-			<CardColumns className="pt-4">
-      <Card>
-        <CardImg top width="100%" src="https://via.placeholder.com/256x180.png?text=Visit+WhoIsHostingThis" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-          <Button color="primary">Button</Button>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardImg top width="100%" src="https://via.placeholder.com/256x180.png?text=Visit+WhoIsHostingThis" alt="Card image cap" />
-      </Card>
-      <Card>
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-          <Button color="secondary" className="btn-raised">Button</Button>
-        </CardBody>
-      </Card>
-      <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-        <CardTitle>Special Title Treatment</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-        <Button>Button</Button>
-      </Card>
-      <Card>
-        <CardImg top width="100%" src="https://via.placeholder.com/256x180.png?text=Visit+WhoIsHostingThis" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-      <Card body inverse color="primary">
-        <CardTitle>Special Title Treatment</CardTitle>
-        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-        <Button color="secondary">Button</Button>
-      </Card>
-    </CardColumns>
+      <UserProfile />
+      <Container className="py-4 bg-light">
+        <Row className="mb-4">
+          <Col sm="4">
+            <Card body inverse className="bg-info shadow-sm">
+              <CardText>
+                987,459
+                <br />
+                <small>Total Website Traffics</small>
+              </CardText>
+            </Card>
+          </Col>
+          <Col sm="4">
+            <Card body inverse className="bg-warning shadow-sm">
+              <CardText>
+                356,785K
+                <br />
+                <small>Total Website Impressions</small>
+              </CardText>
+            </Card>
+          </Col>
+          <Col sm="4">
+            <Card body inverse className="bg-danger shadow-sm">
+              <CardText>
+                $58,778
+                <br />
+                <small>Total Online Sales</small>
+              </CardText>
+            </Card>
+          </Col>
+        </Row>
 
+        <Row>
+          <Col sm="6" className="mb-4">
+            <Card className="shadow-none border">
+              <CardImg
+                top
+                width="100%"
+                src="https://placeimg.com/640/480/any"
+                alt="Card image cap"
+              />
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </CardText>
+                <Button>Button</Button>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col sm="6" className="mb-4">
+            <Card className="shadow-none border">
+              <CardImg
+                top
+                width="100%"
+                src="https://placeimg.com/640/480/any"
+                alt="Card image cap"
+              />
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </CardText>
+                <Button color="secondary">Button</Button>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
 
-      {/* <div className="container">
-        <div className="row">
-          <div className="col-6">
-            <div className="card">
-              <div className="card-header">Featured</div>
-              <div className="card-body">
-                <h5 className="card-title">Special title treatment</h5>
-                <p className="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <div className="d-flex align-items-center justify-content-between">
-                  <a href="#" className="btn btn-primary">
-                    Go somewhere
-                  </a>
-
-
-                  <button type="button" className="btn btn-danger bmd-btn-fab">
-                    <i className="material-icons">grade</i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-6">
-            <div className="card">
-              <div className="card-header">Featured</div>
-              <div className="card-body">
-                <h5 className="card-title">Special title treatment</h5>
-                <p className="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <div className="d-flex align-items-center justify-content-between">
-                  <a href="#" className="btn btn-primary">
-                    Go somewhere
-                  </a>
-
-                  <button type="button" className="btn btn-primary bmd-btn-fab">
-                    <i className="material-icons">grade</i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+        <Row>
+          <Col sm="8">
+            <Card className="shadow-none border">
+              <CardBody>
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+              </CardBody>
+              <img
+                width="100%"
+                src="https://placeimg.com/640/480/any"
+                alt="Card image cap"
+              />
+              <CardBody>
+                <CardText>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </CardText>
+                <CardLink href="#">Card Link</CardLink>
+                <CardLink href="#">Another Link</CardLink>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col sm="4">
+            <blockquote className="mt-4">
+              <h3>Aside title</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat hic minus commodi, nobis mollitia repellat sed inventore
+                atque rem deleniti provident laborum aliquam odio, molestiae
+                minima unde quibusdam veritatis? Possimus.
+              </p>
+            </blockquote>
+          </Col>
+        </Row>
+        <Row className="mt-4">
+          <Col sm="6">
+            <Card className="shadow-none border">
+              <CardBody>
+                <ListGroup>
+                  <ListGroupItem active className="shadow-none">
+                    <ListGroupItemHeading>
+                      List group item heading
+                    </ListGroupItemHeading>
+                    <ListGroupItemText>
+                      Donec id elit non mi porta gravida at eget metus. Maecenas
+                      sed diam eget risus varius blandit.
+                    </ListGroupItemText>
+                  </ListGroupItem>
+                  <ListGroupItem className="shadow-none">
+                    <ListGroupItemHeading>
+                      List group item heading
+                    </ListGroupItemHeading>
+                    <ListGroupItemText>
+                      Donec id elit non mi porta gravida at eget metus. Maecenas
+                      sed diam eget risus varius blandit.
+                    </ListGroupItemText>
+                  </ListGroupItem>
+                  <ListGroupItem className="shadow-none">
+                    <ListGroupItemHeading>
+                      List group item heading
+                    </ListGroupItemHeading>
+                    <ListGroupItemText>
+                      Donec id elit non mi porta gravida at eget metus. Maecenas
+                      sed diam eget risus varius blandit.
+                    </ListGroupItemText>
+                  </ListGroupItem>
+                </ListGroup>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col sm="6">
+            <blockquote className="mt-4">
+              <h3>Aside title</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat hic minus commodi, nobis mollitia repellat sed inventore
+                atque rem deleniti provident laborum aliquam odio, molestiae
+                minima unde quibusdam veritatis? Possimus.
+              </p>
+            </blockquote>
+          </Col>
+        </Row>
+      </Container>
     </React.Fragment>
   );
 };

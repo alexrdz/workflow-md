@@ -4,7 +4,7 @@ in this project:
 
 - parcel
 - typescript
-- bootstrap material design (https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/introduction/)
+- bootstrap material design (https://daemonite.github.io/material/)
 - scss
 
 get started:

@@ -1,14 +1,13 @@
 import * as React from "react";
-import {Link} from '@reach/router';
-import { Nav, NavItem, NavLink } from "reactstrap";
-import './sidenav.css';
+import { Nav } from "reactstrap";
+import {SideNavContainer} from './SideNavContainer';
 
 export const SideNav: React.FunctionComponent = props => {
   return (
-		<div className="col-12 col-md-3 side-nav border-right">
+		<SideNavContainer theme="default" className="position-sticky">
 			<Nav vertical>
 			{props.children}
 			</Nav>
-		</div>
+		</SideNavContainer>
   );
 };

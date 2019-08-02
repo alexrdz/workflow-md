@@ -15,7 +15,7 @@ export const Hero: React.FunctionComponent = () => {
 		out within the larger container.
 	</p>
 	<p className="lead">
-		<Button color="danger" className="btn-raised">Learn More</Button>
+		<Button color="info">Learn More</Button>
 	</p>
 	</div>
 	);
